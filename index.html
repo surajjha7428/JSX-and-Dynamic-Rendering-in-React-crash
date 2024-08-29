@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Dynamic</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // Simple JSX Element
+        ReactDOM.render(
+            <p>Seize the day</p>,
+            document.getElementById('root')
+        );
+
+        // Dynamic Content in JSX
+        const message = "Seize the day";
+        ReactDOM.render(
+            <p>{message}</p>,
+            document.getElementById('root')
+        );
+
+        // Conditional Rendering in JSX
+        const condition = true;
+        ReactDOM.render(
+            condition
+                ? <p>Seize the day</p>
+                : <p>Carpe diem</p>,
+            document.getElementById('root')
+        );
+    </script>
+</body>
+
+</html>
